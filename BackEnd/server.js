@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: [FRONTEND_URL,"http://172.27.14.232:5173/"], // your React dev server URL
+    origin: [FRONTEND_URL,"http://172.27.14.232:5173/"], // ur react server link
     methods: ["GET", "POST"],
   },
 });
@@ -50,6 +50,9 @@ app.use(express.static('../FrontEnd'))
 app.get("/",(req,res) => {
     return res.sendFile(path.join(__dirname,"../FrontEnd/dist","index.html"))
 })
+
+
+
 server.listen(5000,() => {
     console.log("server listening at 5000")
 })

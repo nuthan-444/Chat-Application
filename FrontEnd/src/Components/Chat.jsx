@@ -28,12 +28,10 @@ const Chat = () => {
     // Add to local state (so sender sees immediately)
     setMessageData((prev) => [...prev, newMessage]);
 
-    // Send to backend
+    // Sedning the messas=ge to backend
     socket.emit("user-message", newMessage);
         setMessage("");
     }
-
-
 
 
 
@@ -78,6 +76,7 @@ const Chat = () => {
   return (
     <>
     <div className='container'>
+      <h1>Chat With @Everyone Who Are In This Platform</h1>
             <div className='all-messages'>
                 { messagesData.length > 0 && messagesData.map((singleMessage)  => (
                      <div key={singleMessage.id} className='single-chat'>
