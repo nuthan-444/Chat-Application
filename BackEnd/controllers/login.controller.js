@@ -5,7 +5,6 @@ const { generateToken } = require('../utils/generateToken');
 const userLogin = async(req,res) => {
 
     const {email,password} = req.body;
-
     // check email password is there
     if(!email || !password) {
         return res.status(400).json({status:false,message:"every field is required"});
