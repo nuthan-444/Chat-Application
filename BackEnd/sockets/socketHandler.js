@@ -1,5 +1,4 @@
 const { Server } = require("socket.io");
-
 const initializeSocket = (server, FRONTEND_URL) => {
 
 
